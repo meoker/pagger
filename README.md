@@ -5,7 +5,7 @@ A collection of scripts to generate Sub-GHz raw files compatible with the Flippe
 
 ### Supported systems:
 [Retekess T119](https://meoker.github.io/pagger/retekess-t119/retekess-t119.html)\
-[Retekess TD174](https://meoker.github.io/pagger/retekess-td119/retekess-td119.html)
+[Retekess TD174](https://meoker.github.io/pagger/retekess-td174/retekess-td174.html)
 
 ### How to use:
 Get your Flipper Zero, go to **_Sub-GHz_** -> **_Read_** and try to detect some useful signal:
