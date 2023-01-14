@@ -45,4 +45,5 @@ I developed these scripts for research purposes.\
 I don't endorse any attack that could damage any public service, so please use it responsibly.
 
 ### Credits:
-Thanks to [ShotokanZH](https://github.com/ShotokanZH) for his awesome work with [flipper_sub_plotters_comparers](https://github.com/ShotokanZH/flipper_sub_plotters_comparers)
+Thanks to [ShotokanZH](https://github.com/ShotokanZH) for his awesome work with [flipper_sub_plotters_comparers](https://github.com/ShotokanZH/flipper_sub_plotters_comparers).
+Thanks to [zProAle](https://github.com/zproale) for his support with TD174 pager system.
