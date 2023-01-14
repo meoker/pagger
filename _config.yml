@@ -1,3 +1,5 @@
+name: pagger
+title: null
 plugins:
   - jekyll-relative-links
 relative_links:
