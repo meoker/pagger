@@ -14,7 +14,7 @@ Get your Flipper Zero, go to **_Sub-GHz_** -> **_Read_** and try to detect some 
 
 Once you get your key, go to the related Pagger generator and write it down in the form, you will be able to calculate back the station, pager and action numbers:
 
-![calculate-back](calculate-back.jpg)
+![calculate](calculate.jpg)
 
 From there you can generate a single key file for a single pager:
 
