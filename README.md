@@ -1,7 +1,7 @@
 ![logo](logo.png)
 
 # Pagger
-A collection of scripts to generate Sub-GHz raw files compatible with the Flipper Zero to handle restaurants/kiosks pager systems.
+A collection of Sub-GHz files generators compatible with the Flipper Zero to handle restaurants/kiosks paging systems.
 
 ### Supported systems:
 [Retekess T119](https://meoker.github.io/pagger/retekess-t119/retekess-t119.html)\
@@ -29,7 +29,7 @@ TLDR; Nobody got time for that!
 
 Long version: from my research I found that the first transmitted bits are an encoded number that defines the transmitter station.
 This number is probably randomly generated the first time the station is turned on and I think it's used to avoid collisions with devices of the same type in the same area.\
-If my calculations are correct, with 13/15 bits you can have 8191/32767 possible station numbers, so you should loop through all of these numbers if you want to find yours.\
+If my calculations are correct, with 13 bits you can have 8191 possible station numbers, so you should loop through all of these numbers if you want to find yours.\
 The problem now is that for each station number, you should also loop through all of its pagers numbers and obviously this is time-consuming.
 In my tests, calling 10 pagers for 1000 stations took ~1h on my Flipper Zero, so do your math!\
 That said, the other bruteforcers I found online never worked.
