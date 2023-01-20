@@ -249,9 +249,10 @@
         document.getElementById('key-download').setAttribute('aria-busy', true);
 
         var station = Number(document.getElementById('station-num-kp').value);
+        var action = Number(0);
         var pager = Number(document.getElementById('pager-num-kp').value);
 
-        var hex = calcNumToHex(station, 0, pager).toString().padStart(16, '0');
+        var hex = calcNumToHex(station, action, pager).toString().padStart(16, '0');
         var keyData = genKeyData(hex);
         var file = genKeyFile(keyData);
         
@@ -273,14 +274,15 @@
         var pagerTo = Number(document.getElementById('pager-num-to-rp').value);
 
         var rawData = '';
+        var actionBin = reverse(decToBin(0, 2));
 
         for (var s = stationFrom; s <= stationTo; s++) {
-          var stationBin = reverse(decToBin(s, 15));
+          var stationBin = reverse(decToBin(s, 13));
 
           for (var p = pagerFrom; p <= pagerTo; p++) {
             var pagerBin = reverse(decToBin(p, 8));
 
-            var bin = '01' + encManchester(stationBin + pagerBin, 0);
+            var bin = '01' + encManchester(stationBin + actionBin + pagerBin, 0);
             var raw39 = genRawData(300, 900, 10, bin);
             
             rawData += raw39;
@@ -302,9 +304,10 @@
         document.getElementById('desync-download').setAttribute('aria-busy', true);
 
         var station = Number(document.getElementById('station-num-dp').value);
+        var action = Number(3);
         var pager = Number(237);
 
-        var hex = calcNumToHex(station, 3, pager).toString().padStart(16, '0');
+        var hex = calcNumToHex(station, action, pager).toString().padStart(16, '0');
         var keyData = genKeyData(hex);
         var file = genKeyFile(keyData);
        
@@ -351,7 +354,7 @@
         <div class="grid">
           <div>
             <label for="station-num-kp">Station:</label>
-            <input type="number" name="station-num-kp" id="station-num-kp" min="0" max="32767" placeholder="0 - 32767">
+            <input type="number" name="station-num-kp" id="station-num-kp" min="0" max="8191" placeholder="0 - 8191">
           </div>
           <div>
             <label for="pager-num-kp">Pager:</label>
@@ -374,11 +377,11 @@
           <div class="grid">
             <div>
               <label for="station-num-from-rp">Station (from):</label>
-              <input type="number" name="station-num-from-rp" id="station-num-from-rp" min="0" max="32767" placeholder="0 - 32767">
+              <input type="number" name="station-num-from-rp" id="station-num-from-rp" min="0" max="8191" placeholder="0 - 8191">
             </div>
             <div>
               <label for="station-num-to-rp">Station (to):</label>
-              <input type="number" name="station-num-to-rp" id="station-num-to-rp" min="0" max="32767" placeholder="0 - 32767">
+              <input type="number" name="station-num-to-rp" id="station-num-to-rp" min="0" max="8191" placeholder="0 - 8191">
             </div>  
           </div>
           <div class="grid">
@@ -408,7 +411,7 @@
           <div></div>
           <div>
             <label for="station-num-dp">Station:</label>
-            <input type="number" name="station-num-dp" id="station-num-dp" min="0" max="32767" placeholder="0 - 32767">
+            <input type="number" name="station-num-dp" id="station-num-dp" min="0" max="8191" placeholder="0 - 8191">
             <button id="desync-download" onclick="downloadDesyncFile()">Download</button>
           </div>
           <div></div>
