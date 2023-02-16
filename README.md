@@ -4,8 +4,9 @@
 A collection of Sub-GHz files generators compatible with the Flipper Zero to handle restaurants/kiosks paging systems.
 
 ### Supported systems:
-[Retekess T119](https://meoker.github.io/pagger/retekess-t119-td165/retekess-t119-td165.html)\
-[Retekess TD165](https://meoker.github.io/pagger/retekess-t119-td165/retekess-t119-td165.html)\
+[Retekess T119](https://meoker.github.io/pagger/retekess-t119/retekess-t119.html)\
+[Retekess TD157](https://meoker.github.io/pagger/retekess-td157/retekess-td157.html)\
+[Retekess TD165](https://meoker.github.io/pagger/retekess-td165/retekess-td165.html)\
 [Retekess TD174](https://meoker.github.io/pagger/retekess-td174/retekess-td174.html)
 
 ### How to use:
